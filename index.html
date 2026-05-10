@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Tech Days 2026 - UMAB</title>
+    <style>
+        /* Couleurs de base (Thème Python & Tech) */
+        :root {
+            --python-blue: #306998;
+            --python-dark-blue: #224c6e;
+            --python-yellow: #FFD43B;
+            --light-bg: #f4f7f6;
+            --dark-text: #333;
+            --white: #ffffff;
+        }
+
+        /* Reset & Typographie */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark-text); background-color: var(--light-bg); }
+        h1, h2, h3 { color: var(--python-dark-blue); }
+        a { text-decoration: none; color: var(--python-blue); }
+
+        /* Navigation */
+        nav { background: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--python-blue); }
+        .logo span { color: var(--python-yellow); text-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a:hover { color: var(--python-yellow); font-weight: bold; }
+
+        /* Hero Section (En-tête) */
+        header { background: linear-gradient(135deg, var(--python-blue), var(--python-dark-blue)); color: var(--white); text-align: center; padding: 100px 20px; }
+        header h1 { color: var(--white); font-size: 3rem; margin-bottom: 10px; }
+        header p.subtitle { font-size: 1.2rem; font-style: italic; margin-bottom: 20px; color: var(--python-yellow); }
+        header p.details { font-size: 1.1rem; margin-bottom: 30px; }
+        .btn { display: inline-block; background: var(--python-yellow); color: var(--python-dark-blue); padding: 10px 25px; border-radius: 5px; font-weight: bold; font-size: 1.1rem; transition: background 0.3s; }
+        .btn:hover { background: #e5bd2e; }
+
+        /* Sections communes */
+        section { padding: 60px 10%; }
+        section h2 { text-align: center; font-size: 2.2rem; margin-bottom: 40px; text-transform: uppercase; border-bottom: 3px solid var(--python-yellow); display: inline-block; padding-bottom: 5px; }
+        .center-heading { text-align: center; }
+
+        /* Tracks (Axes Thématiques) - Grille */
+        .tracks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .track-card { background: var(--white); padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid var(--python-blue); transition: transform 0.3s; }
+        .track-card:hover { transform: translateY(-5px); border-left-color: var(--python-yellow); }
+        .track-card h3 { margin-bottom: 10px; font-size: 1.3rem; }
+
+        /* Programme */
+        .program-container { display: flex; flex-wrap: wrap; gap: 40px; }
+        .program-day { flex: 1; min-width: 300px; background: var(--white); padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .program-day h3 { color: var(--white); background: var(--python-blue); padding: 10px; border-radius: 5px; text-align: center; margin-bottom: 20px; }
+        ul.timeline { list-style: none; }
+        ul.timeline li { margin-bottom: 15px; padding-left: 20px; border-left: 2px solid var(--python-yellow); position: relative; }
+        ul.timeline li::before { content: ''; position: absolute; left: -6px; top: 5px; width: 10px; height: 10px; background: var(--python-blue); border-radius: 50%; }
+        .time { font-weight: bold; color: var(--python-dark-blue); }
+
+        /* Footer */
+        footer { background: var(--dark-text); color: var(--white); text-align: center; padding: 30px 20px; margin-top: 40px; }
+        footer p { margin-bottom: 10px; }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .nav-links { display: none; /* Pour simplifier sur mobile */ }
+            header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Python<span>Tech</span>Days</div>
+        <div class="nav-links">
+            <a href="#about">À propos</a>
+            <a href="#tracks">Thématiques</a>
+            <a href="#program">Programme</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Python Tech Days 2026</h1>
+        <p class="subtitle">Les Journées Python pour l'Ingénierie, l'IA, la Pédagogie et la Recherche</p>
+        <p class="details">06 & 07 Juin 2026 | FST - UMAB, Mostaganem</p>
+        <a href="#tracks" class="btn">Participer</a>
+    </header>
+
+    <section id="about">
+        <div class="center-heading">
+            <h2>L'Événement</h2>
+        </div>
+        <p style="text-align: justify; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+            La Faculté des Sciences et de la Technologie (FST) de l'Université de Mostaganem a l'honneur d'organiser les <strong>Python Tech Days</strong>.
+          Cet événement de deux jours rassemble chercheurs, enseignants, doctorants et étudiants autour des applications concrètes de Python dans les métiers de l'ingénieur.
+          Au programme : conférences plénières, sessions orales, exposition de prototypes étudiants et workshops pratiques sur l'Intelligence Artificielle.
+        </p>
+    </section>
+
+    <section id="tracks" style="background: var(--white);">
+        <div class="center-heading">
+            <h2>Axes Thématiques (Tracks)</h2>
+        </div>
+         <p style="text-align: justify; max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+              Participez à l'animation des sessions orales en présentant une architecture, une librairire ou une API Python de votre expertise, 
+           dans les thématiques (ou autres) ci-dessous. Enregistrez votre participation sur le lien <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9LGsUede6DuWBXahJ_zeIIDodCQL7nuIyZ9VZ-hmSJZrBJA/viewform?usp=publish-editor">Google Forms</a>. 
+         </p>  
+      <div class="tracks-grid">
+            <div class="track-card">
+                <h3>Track 1 : Signal & Imagerie</h3>
+                <p>Filtrage numérique, analyse spectrale, vision par ordinateur, imagerie médicale et détection de défauts (SciPy, OpenCV).</p>
+            </div>
+            <div class="track-card">
+                <h3>Track 2 : Robotique & Embarqué</h3>
+                <p>Programmation de microcontrôleurs (MicroPython), IoT, navigation autonome et simulation de systèmes de commande (ROS, python-control).</p>
+            </div>
+            <div class="track-card">
+                <h3>Track 3 : Énergétique & Procédés</h3>
+                <p>Thermodynamique, simulation de réacteurs, bilans thermiques et optimisation des réseaux électriques (CoolProp, GEKKO, pandapower).</p>
+            </div>
+            <div class="track-card">
+                <h3>Track 4 : Modélisation Numérique</h3>
+                <p>Résolution d'équations (EDP), méthode des éléments finis, mécanique des fluides et CAO paramétrique (FEniCS, FreeCAD API).</p>
+            </div>
+            <div class="track-card">
+                <h3>Track 5 : Environnement & BIM</h3>
+                <p>Systèmes d'Information Géographique (SIG), topographie, maquettes numériques BIM et architecture générative (GeoPandas, IfcOpenShell).</p>
+            </div>
+            <div class="track-card">
+                <h3>Track 6 : Boîte à Outils du Chercheur</h3>
+                <p>Automatisation des mesures (PyVISA), Data Science, recherche reproductible et dataviz (Pandas, Jupyter, Seaborn).</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="program">
+        <div class="center-heading">
+            <h2>Programme Prévisionnel</h2>
+        </div>
+        <!--div class="program-container">
+            <div class="program-day">
+                <h3>Mardi 12 Mai 2026 : Fondations & Vision</h3>
+                <ul class="timeline">
+                    <li><span class="time">08h30</span> - Accueil et remise des badges</li>
+                    <li><span class="time">09h00</span> - Ouverture officielle</li>
+                    <li><span class="time">09h30</span> - Plénière d'ouverture (Vision stratégique de l'IA)</li>
+                    <li><span class="time">10h30</span> - Pause café & Ouverture de l'exposition des prototypes (PFE)</li>
+                    <li><span class="time">11h00</span> - Plénière n°2</li>
+                    <li><span class="time">13h30</span> - Sessions Orales Parallèles (Tracks 1, 2 et 3)</li>
+                    <li><span class="time">15h30</span> - Ateliers Pratiques (Workshops)</li>
+                </ul>
+            </div>
+            <div class="program-day">
+                <h3>Mercredi 13 Mai 2026 : Spécialisation & Clôture</h3>
+                <ul class="timeline">
+                    <li><span class="time">09h00</span> - Plénière n°3</li>
+                    <li><span class="time">10h00</span> - Démonstrations "Live" Incubateur & Vote du meilleur prototype</li>
+                    <li><span class="time">11h00</span> - Sessions Orales Parallèles (Tracks 4, 5 et 6)</li>
+                    <li><span class="time">14h00</span> - Table Ronde : "Python dans l'Industrie"</li>
+                    <li><span class="time">15h30</span> - Remise des prix et Clôture</li>
+                </ul>
+            </div>
+    </div-->
+    </section>
+
+    <footer id="contact">
+        <p><strong>Python Tech Days 2026</strong></p>
+        <p>Unité EAD | Faculté des Sciences et de la Technologie (FST) | Université Abdelhamid Ibn Badis de Mostaganem (UMAB)</p>
+        <p>Email : pythontechdays@univ-mosta.dz</p>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: #aaa;">&copy; 2026 Comité d'Organisation. Créé pour GitHub Pages.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
